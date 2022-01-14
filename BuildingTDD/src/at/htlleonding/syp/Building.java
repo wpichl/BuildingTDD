@@ -6,11 +6,11 @@ public class Building {
     private Integer id;
     private LinkedList<String> residents = new LinkedList<>();;
 
-    public Building(String _resident) {
+    public Building(String _resident, Integer id) {
         residents.add(_resident);
     }
 
-    public Building(String[] _residents) {
+    public Building(String[] _residents, Integer id) {
         for (int i = 0; i < _residents.length; i++) {
             residents.add(_residents[i]);
         }
