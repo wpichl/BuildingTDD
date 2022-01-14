@@ -6,14 +6,18 @@ public class Building {
     private Integer id;
     private LinkedList<String> residents = new LinkedList<>();;
 
-    public Building(String _resident, Integer id) {
+    public Building(String _resident, Integer _id) {
         residents.add(_resident);
+        id = _id;
+
     }
 
-    public Building(String[] _residents, Integer id) {
+    public Building(String[] _residents, Integer _id) {
         for (int i = 0; i < _residents.length; i++) {
             residents.add(_residents[i]);
         }
+
+        id = _id;
     }
 
     public void removeResident(String name) {
@@ -34,5 +38,9 @@ public class Building {
 
     public int getNumberOfResidents() {
         return residents.size();
+    }
+
+    public int getId() {
+        return id;
     }
 }

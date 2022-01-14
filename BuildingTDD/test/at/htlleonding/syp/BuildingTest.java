@@ -66,4 +66,10 @@ public class BuildingTest {
         building.addResident("Huber");
         assertEquals(2, building.getNumberOfResidents());
     }
+
+    @Test
+    public void itShouldReturn3Given3AsId() {
+        Building building = new Building("Huber", 3);
+        assertEquals(3, building.getId());
+    }
 }
