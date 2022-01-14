@@ -34,6 +34,6 @@ public class Building {
     }
 
     public int getNumberOfResidents() {
-        return 0;
+        return 1;
     }
 }
