@@ -23,7 +23,9 @@ public class Building {
     }
 
     public void addResident(String name) {
-        residents.add(name);
+        if (!containsResident(name)) {
+            residents.add(name);
+        }
     }
 
     public boolean containsResident(String name) {

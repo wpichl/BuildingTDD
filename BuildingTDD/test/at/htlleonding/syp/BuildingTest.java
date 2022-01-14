@@ -58,4 +58,12 @@ public class BuildingTest {
         building.addResident("Klaus");
         assertEquals(3, building.getNumberOfResidents());
     }
+
+    @Test
+    public void itShouldFailSilentlyAddingInvalidResident() {
+        String[] residents = {"Huber", "Karl"};
+        Building building = new Building(residents);
+        building.addResident("Huber");
+        assertEquals(2, building.getNumberOfResidents());
+    }
 }
