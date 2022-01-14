@@ -50,4 +50,12 @@ public class BuildingTest {
         building.removeResident("X");
         assertEquals(4, building.getNumberOfResidents());
     }
+
+    @Test
+    public void itShouldReturn3Adding1Resident() {
+        String[] residents = {"Huber", "Karl"};
+        Building building = new Building(residents);
+        building.addResident("Klaus");
+        assertEquals(3, building.getNumberOfResidents());
+    }
 }
