@@ -42,4 +42,12 @@ public class BuildingTest {
         building.removeResident("Karl");
         assertEquals(3, building.getNumberOfResidents());
     }
+
+    @Test
+    public void itShouldFailSilentlyRemovingInvalidResident() {
+        String[] residents = {"Huber", "Karl", "Klaus", "Maier"};
+        Building building = new Building(residents);
+        building.removeResident("X");
+        assertEquals(4, building.getNumberOfResidents());
+    }
 }
