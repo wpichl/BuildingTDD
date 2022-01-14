@@ -18,4 +18,12 @@ public class BuildingTest {
         assertEquals(true, building.containsResident("Huber"));
     }
 
+    @Test
+    public void itShouldReturnTrueWhenCreatingBuildingWithMultipleResidents() {
+        String[] residents = {"Huber", "Karl", "Klaus"};
+        Building building = new Building(residents);
+        assertEquals(true, building.containsResident("Huber"));
+        assertEquals(true, building.containsResident("Karl"));
+        assertEquals(true, building.containsResident("Klaus"));
+    }
 }
