@@ -12,16 +12,11 @@ public class Building {
         }
 
         residents.add(_resident);
-
     }
 
     public Building(String[] _residents) {
         if (residents == null) {
             residents = new LinkedList<>();
-        }
-
-        for (int i = 0; i < _residents.length; i++) {
-            residents.add(_residents[i]);
         }
     }
 
@@ -31,6 +26,10 @@ public class Building {
 
     public void addResident() {
 
+    }
+
+    public boolean containsResident(String name) {
+        return residents.contains(name);
     }
 
     public int getNumberOfResidents() {
