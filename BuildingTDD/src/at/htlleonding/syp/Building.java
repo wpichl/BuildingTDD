@@ -16,11 +16,13 @@ public class Building {
         }
     }
 
-    public void removeResident() {
-
+    public void removeResident(String name) {
+        if (containsResident(name)) {
+            residents.remove(name);
+        }
     }
 
-    public void addResident() {
+    public void addResident(String name) {
 
     }
 

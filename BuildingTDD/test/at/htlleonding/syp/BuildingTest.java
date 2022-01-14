@@ -34,4 +34,12 @@ public class BuildingTest {
 
         assertEquals(3, building.getNumberOfResidents());
     }
+
+    @Test
+    public void itShouldReturn3Removing1From4Residents() {
+        String[] residents = {"Huber", "Karl", "Klaus", "Maier"};
+        Building building = new Building(residents);
+        building.removeResident("Karl");
+        assertEquals(3, building.getNumberOfResidents());
+    }
 }
