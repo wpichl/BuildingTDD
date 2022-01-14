@@ -26,4 +26,12 @@ public class BuildingTest {
         assertEquals(true, building.containsResident("Karl"));
         assertEquals(true, building.containsResident("Klaus"));
     }
+
+    @Test
+    public void itShouldReturn3Given3Residents() {
+        String[] residents = {"Huber", "Karl", "Klaus"};
+        Building building = new Building(residents);
+
+        assertEquals(3, building.getNumberOfResidents());
+    }
 }

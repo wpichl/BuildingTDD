@@ -29,6 +29,6 @@ public class Building {
     }
 
     public int getNumberOfResidents() {
-        return 1;
+        return residents.size();
     }
 }
